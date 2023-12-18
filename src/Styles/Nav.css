@@ -1,0 +1,58 @@
+.header{
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ width: 100%;
+ gap: 30px;
+ position: sticky;
+ top: 0;
+ z-index: 999;
+ background-color: white;
+}
+
+.header--logo{
+ display: flex;
+ align-items: center;
+ width: 30%;
+}
+
+.header--input{
+ display: flex;
+ width: 250px;
+ padding: 5px 0;
+ border-radius: 20px;
+ background-color: whitesmoke;
+}
+
+.header--input > input{
+ border: none;
+ background-color: whitesmoke;
+}
+
+.header--search{
+ color:lightgray;
+}
+
+.header--icons{
+ width:40%;
+ display:flex;
+ justify-content: space-evenly;
+ color: lightgray;
+}
+
+.header--profile{
+ display: flex;
+ width: 30%;
+ display:flex;
+ justify-content: space-evenly;
+ align-items: center;
+ cursor: pointer;
+}
+
+
+.header--display{
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+}
+

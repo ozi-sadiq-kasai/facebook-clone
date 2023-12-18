@@ -1,0 +1,25 @@
+.sidebar{
+ flex: 30%;
+ position:sticky;
+ height:500px ;
+ top: 73px;
+}
+
+li{
+ width: 100%;
+ display: flex;
+ column-gap: 15px;
+ margin-left: 10px;
+ margin-bottom: 15px;
+}
+
+.sidebar--icon{
+ color:cadetblue
+}
+
+.sidebar--name{
+ font-size: 15px;
+ font-weight: 500;
+ color:#050505;
+}
+
