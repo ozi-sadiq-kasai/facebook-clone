@@ -1,6 +1,8 @@
+
 const Friends = () => {
   return (
-    <div>Friends</div>
+    <div>
+    </div>
   )
 }
 export default Friends

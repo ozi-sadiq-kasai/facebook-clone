@@ -1,10 +1,16 @@
 import '../Styles/Postsbar.css'
+import { useState } from "react"
 import { Plus} from 'react-feather'
 import Avatar from '../components/Avatar'
 import { postbarIcons, postNames,postColors } from '../data'
+import Modal from './Modal'
+import Posts from './Posts'
+
 
 
 const Postsbar = () => {
+ const [openModal,setOpenModal] = useState(false)
+ // const [post,setPost] = useState('')
 
   const postIcons = postbarIcons.map((icon,index)=>{
    return(
@@ -14,6 +20,19 @@ const Postsbar = () => {
    </li>
    )
   })
+
+
+
+ const handleCloseModal = ()=>{
+  setOpenModal(false)
+  console.log(openModal)
+ }
+ const handleOpenModal = ()=>{
+  setOpenModal(true)
+  console.log(openModal)
+ }
+
+
 
 
   return (
@@ -26,17 +45,24 @@ const Postsbar = () => {
       <p className='postbar--para'>Share a photo or write something</p>
       </div>
      </div>
-     
+
      <div className="postbar--post">
        <div className="postbar--avatar">
         <Avatar/>
-       <button type='submit'>What's on your mind, Orz?</button>
+       <button 
+       type='submit'
+       onClick={handleOpenModal}
+       >What's on your mind, Orz?</button>
        </div> 
         <hr/>
         <ul className='postbar--icons'>
          {postIcons}
         </ul>
       </div>
+        {openModal && (
+        <Modal handleCloseModal={handleCloseModal} />
+      )}
+       {<Posts/>}
      </div>
     
   )

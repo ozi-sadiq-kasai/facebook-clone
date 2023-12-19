@@ -1,11 +1,16 @@
-import { Client } from 'appwrite';
+import { Client,Databases } from 'appwrite';
 
-export const PROJECT_ID ='657f0ef5ae9de1be59b1'
-export const DATABASE_ID ='657f14ea5b5dc4d1be22'
-export const COLLECTION_ID_MESSAGES ='657f1500cce8a5a335e3'
+export const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
+export const DATABASE_ID = process.env.REACT_APP_DATABASE_ID
+export const COLLECTION_ID_MESSAGES = process.env.REACT_APP_COLLECTION_ID_MESSAGES
+
 
 const client = new Client();
 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('657f0ef5ae9de1be59b1');
+
+export const databases = new Databases(client)
+
+export default client

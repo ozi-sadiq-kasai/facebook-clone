@@ -24,7 +24,7 @@ const Nav = () => {
     <div className="header--icons">
 
   <NavLink
-   to="/home"
+   to="/"
    style={({ isActive }) => ({
    color: isActive
    ? "blue" : "gray",
