@@ -1,18 +1,10 @@
 import '../Styles/Modal.css'
-import { useState } from 'react'
-
+import { useContext } from 'react'
+import { AuthContext } from '../Context'
 
 const Modal = ({handleCloseModal}) => {
- const [post,setPost] = useState('')
+ const {post,handleChange,handleSubmit} = useContext(AuthContext)
 
-  const handleChange = (e)=>{
-  setPost(e.target.value)
- 
-  }
-
-  const handleSubmit = ()=>{
-    console.log(post)
-  }
 
   return (
  <div className='modalBackground'>
@@ -41,6 +33,8 @@ const Modal = ({handleCloseModal}) => {
  </div>
   )
 }
+
+
 export default Modal 
 
 

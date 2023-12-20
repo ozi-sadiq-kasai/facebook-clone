@@ -5,7 +5,7 @@ import travel from '../images/travel.jpg'
 const Suggestions = () => {
   return (
     <div className='suggest'>
-
+      <h4>Suggestions</h4>
      <div className='suggest--input'>
       <img 
       src={remote}
