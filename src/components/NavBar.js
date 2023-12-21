@@ -1,11 +1,15 @@
 import facebook from '../images/facebook.svg'
 import { NavLink} from 'react-router-dom'
-import { Bell, Menu, Search,Home,Users,Video,ShoppingCart,MessageSquare } from 'react-feather'
+import { Bell,Search,Home,Users,Video,ShoppingCart,MessageSquare,LogOut } from 'react-feather'
 import Avatar from './Avatar'
+import { useContext } from 'react'
+import { AuthContext } from '../Context'
 import '../Styles/Nav.css'
 
 
 const Nav = () => {
+ const {handleUserLogout} = useContext(AuthContext)
+
   return (
 <nav className='header'>
 
@@ -50,7 +54,7 @@ const Nav = () => {
     </div>
 
     <div className="header--profile">
-     <Menu/>
+     <LogOut onClick={handleUserLogout}/>
      <MessageSquare/>
      <Bell/>
      <Avatar/>
@@ -59,3 +63,5 @@ const Nav = () => {
   )
 }
 export default Nav
+
+ 

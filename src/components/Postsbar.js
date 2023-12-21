@@ -1,5 +1,6 @@
 import '../Styles/Postsbar.css'
-import { useState } from "react"
+import { useContext,useEffect } from "react"
+import { AuthContext } from '../Context'
 import { Plus} from 'react-feather'
 import Avatar from '../components/Avatar'
 import { postbarIcons, postNames,postColors } from '../data'
@@ -9,30 +10,21 @@ import Posts from './Posts'
 
 
 const Postsbar = () => {
- const [openModal,setOpenModal] = useState(false)
- // const [post,setPost] = useState('')
+ // const [openModal,setOpenModal] = useState(false)
+ const {openModal,handleCloseModal,handleOpenModal,getUserOnLoad} = useContext(AuthContext)
 
   const postIcons = postbarIcons.map((icon,index)=>{
    return(
    <li key={index}>
-    <p style={{color:postColors[index]}}className='postbar--icons-icons'>{icon}</p>
+    <p style={{color:postColors[index]}}className='postbar--icons-icons'>{icon} </p>
     <p className='postbar--icons-name'>{postNames[index]}</p> 
    </li>
    )
   })
 
-
-
- const handleCloseModal = ()=>{
-  setOpenModal(false)
-  console.log(openModal)
- }
- const handleOpenModal = ()=>{
-  setOpenModal(true)
-  console.log(openModal)
- }
-
-
+  useEffect(()=>{
+    getUserOnLoad()
+  },[])
 
 
   return (

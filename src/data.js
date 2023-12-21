@@ -4,11 +4,11 @@ Bookmark,Video,ShoppingCart,Rss,Clipboard,BarChart,Heart,Sun,Play,Smile,Image} f
 
 
 
- export const sidebarIcons = [<Avatar/>,<Users/>,<Clock/>,<Bookmark/>,<Video/>,<ShoppingCart/>,<Rss/>,<Clipboard/>,<BarChart/>,<Heart/>,<Sun/>,<Play/>]
+ export const sidebarIcons = [<Users/>,<Clock/>,<Bookmark/>,<Video/>,<ShoppingCart/>,<Rss/>,<Clipboard/>,<BarChart/>,<Heart/>,<Sun/>,<Play/>]
 
 
 
- export const sidebarnames = ['orz Sadiq','Find Friends','Memories','Saved','Video','Marketplace','Feeds','Events','Ads Manager','Fundraisers','Climate Science Center','Gaming Video']
+ export const sidebarnames = ['Find Friends','Memories','Saved','Video','Marketplace','Feeds','Events','Ads Manager','Fundraisers','Climate Science Center','Gaming Video']
 
  export const postbarIcons = [<Video/>,<Image/>,<Smile/>]
 

@@ -1,9 +1,10 @@
 import '../Styles/Modal.css'
 import { useContext } from 'react'
 import { AuthContext } from '../Context'
+import { X } from 'react-feather'
 
-const Modal = ({handleCloseModal}) => {
- const {post,handleChange,handleSubmit} = useContext(AuthContext)
+const Modal = () => {
+ const {post,handlePostChange,handleSubmit,handleCloseModal} = useContext(AuthContext)
 
 
   return (
@@ -11,24 +12,25 @@ const Modal = ({handleCloseModal}) => {
   <div className="modalContainer">
     <h1>Create a Post</h1>
     
-    <textarea 
+  <form onClick={handleSubmit}>
+     <textarea 
     name="post"
     id="post"
-    cols="30" 
-    rows="10"
+     maxLength='1000'
     value={post}
-    onChange={handleChange}
+    onChange={handlePostChange}
     placeholder='whats on your mind'
     ></textarea>
-    
     <div className='modalContainer--btn'>
-     <button onClick={handleSubmit}>
-      Post
-    </button>
-    <button onClick={handleCloseModal}>
+     {/* <button type='submit'>Post</button> */}
+ 
+    </div>
+       <button onClick={handleCloseModal}>
       Cancel
     </button>
-    </div>
+  </form>
+    
+    
   </div>
  </div>
   )
