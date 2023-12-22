@@ -47,15 +47,22 @@ const handleSignupLogin =async(e,credentials)=>{
     credentials.password1,
     credentials.name)
 
-  console.log(response)
+  // console.log(response)
 
   await account.createEmailSession(credentials.email,credentials.password1)
 
   const accountDetails = await account.get()
-  console.log('accounDetails:',accountDetails)
-  console.log('accounDetails:',accountDetails.name)
+  // console.log('accounDetails:',accountDetails)
+  // console.log('accounDetails:',accountDetails.name)
   setUser(accountDetails)
   navigate('/')
+
+  setCredentials({
+      name: '',
+      email: '',
+      password1: '',
+      password2: '',
+    });
  } 
  
  catch (error) {
@@ -69,10 +76,11 @@ const handleUserLogin = async (e)=>{
 e.preventDefault()
  try {
   let response = await account.createEmailSession(credentials.email,credentials.password1)
-  console.log('logged',response)
+  // console.log('logged',response)
    const accountDetails = account.get()
    setUser(accountDetails)
    navigate('/')
+   
  } catch (error) {
   console.error(error)
  }
@@ -111,8 +119,6 @@ const handleSubmit = async (e) => {
   if (post.trim() !== '') { // Check if user is not null
     let payload = {
       body: post,
-      // user_id: user.$id,
-      // username: user.name,
     };
     console.log(payload.body)
     setPost('');

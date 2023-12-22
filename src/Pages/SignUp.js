@@ -8,7 +8,9 @@ const SignUp = () => {
  const{handleInputChange,credentials,handleSignupLogin}= useContext(AuthContext)
   return (
     <div className='signup'>
-
+     
+     <h1 className='signup--header'>Friends Signup</h1>
+     
      <form onSubmit={(e)=>handleSignupLogin(e,credentials)}>
 
       <input
@@ -17,6 +19,7 @@ const SignUp = () => {
        onChange={handleInputChange}
        value={credentials.name}
        placeholder='Enter name'
+       className='signup--name'
        />
 
        <input
@@ -25,6 +28,7 @@ const SignUp = () => {
        onChange={handleInputChange}
        value={credentials.email}
        placeholder='Enter Email'
+       className='signup--email'
        />
 
        <input
@@ -33,6 +37,7 @@ const SignUp = () => {
        onChange={handleInputChange}
        value={credentials.password1}
        placeholder='Enter Password'
+       className='signup--password1'
        />
             <input
        type="password"
@@ -40,11 +45,15 @@ const SignUp = () => {
        onChange={handleInputChange}
        value={credentials.password2}
        placeholder='Confirm Password'
+       className='signup--password2'
        />
   
-     <button type='submit'>Submit</button>
+     <button 
+     type='submit'
+     className='signup--btn'
+     >Submit</button>
      </form>
-     <p>Already have an account <Link to='/login'>Login</Link></p>
+     <p className='signup--signup'>Already have an account <Link to='/login'>Login</Link></p>
     </div>
   )
 }
