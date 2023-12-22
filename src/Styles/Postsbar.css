@@ -3,7 +3,7 @@
  min-height:100vh;
  margin-top: 18px;
  cursor: pointer;
-
+ border: 1px solid red;
 }
 
 .postbar--story{
@@ -24,6 +24,7 @@
  border-radius: 50%;
  background-color: whitesmoke;
  margin-left: 9px;
+ list-style-type:none;
 }
 
 .postbar--createStory{
@@ -42,8 +43,17 @@
 }
 
 .postbar--icons{
- display: flex;
  margin-top: 15px;
+ list-style-type: none;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+
+}
+.postbar--icons >li{
+ display: flex;
+ align-items:start;
+ justify-content: center;
 }
 
 

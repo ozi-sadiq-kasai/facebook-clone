@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { AuthContext } from "../Context"
 import Avatar from './Avatar'
+import '../Styles/Posts.css'
+
 
 const Posts = () => {
  const{posts,handleDeletePost,user} = useContext(AuthContext)

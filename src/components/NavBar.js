@@ -54,10 +54,10 @@ const Nav = () => {
     </div>
 
     <div className="header--profile">
-     <LogOut onClick={handleUserLogout}/>
      <MessageSquare/>
      <Bell/>
      <Avatar/>
+     <LogOut onClick={handleUserLogout}/>
     </div>
 </nav>
   )

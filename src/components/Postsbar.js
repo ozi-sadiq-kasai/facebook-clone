@@ -11,7 +11,7 @@ import Posts from './Posts'
 
 const Postsbar = () => {
  // const [openModal,setOpenModal] = useState(false)
- const {openModal,handleCloseModal,handleOpenModal,getUserOnLoad} = useContext(AuthContext)
+ const {openModal,handleCloseModal,handleOpenModal,getUserOnLoad,user} = useContext(AuthContext)
 
   const postIcons = postbarIcons.map((icon,index)=>{
    return(
@@ -44,7 +44,7 @@ const Postsbar = () => {
        <button 
        type='submit'
        onClick={handleOpenModal}
-       >What's on your mind, Orz?</button>
+       >What's on your mind {user ? user.name : 'Anonymous'}?</button>
        </div> 
         <hr/>
         <ul className='postbar--icons'>

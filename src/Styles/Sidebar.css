@@ -1,16 +1,23 @@
 .sidebar{
- flex: 30%;
- position:sticky;
- height:500px ;
- top: 73px;
+ padding-right: 100px;
+}
+.sidebar--ul{
+  flex: 30%;
+  position: fixed;
+  cursor: pointer;
 }
 
-li{
+.sidebar--ul > li{
  width: 100%;
  display: flex;
  column-gap: 15px;
  margin-left: 10px;
  margin-bottom: 15px;
+ padding: 5px 0 5px 5px;
+}
+.sidebar--ul > li:hover{
+ background-color:lightgray;
+ border-radius: 4px 0 0 4px;
 }
 
 .sidebar--icon{
@@ -23,3 +30,24 @@ li{
  color:#050505;
 }
 
+.sidebar--username{
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ justify-content: center;
+ margin: 17px 0;
+  flex: 30%;
+ position:sticky;
+ top: 70px;
+}
+.sidebar--username > h1{
+ color: rgb(145, 144, 144);
+ font-weight: 400;
+ font-size: x-large;
+ font-family: cursive;
+}
+.sidebar--username > span{
+ font-weight: 400;
+ font-size: x-large;
+  font-family: cursive;
+}

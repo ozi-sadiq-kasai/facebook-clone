@@ -15,9 +15,13 @@ const sidebarItems = sidebarnames.map((name,index)=>(
 ))
 
   return (
-   <div>
-     {user ? <h2>{user.name}</h2> : <p>Anonymous</p>}
-      <ul className='sidebar'>
+   <div className='sidebar'>
+ 
+     {user ? <div className='sidebar--username'>
+      <span>Welcome</span> 
+      <h1>{user.name}</h1>
+     </div> : <p>Anonymous</p>}
+      <ul className='sidebar--ul'>
     {sidebarItems}
      </ul>
    </div>
