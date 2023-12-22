@@ -10,26 +10,24 @@ const Modal = () => {
   return (
  <div className='modalBackground'>
   <div className="modalContainer">
-    <h1>Create a Post</h1>
+  <div className="modalContainer--header">
+     <h1>Create a Post</h1>
+     <X onClick={handleCloseModal}/>
+  </div>
     
   <form onClick={handleSubmit}>
      <textarea 
     name="post"
     id="post"
-     maxLength='1000'
+    maxLength='1000'
     value={post}
     onChange={handlePostChange}
     placeholder='whats on your mind'
     ></textarea>
-    <div className='modalContainer--btn'>
-     {/* <button type='submit'>Post</button> */}
- 
-    </div>
-       <button onClick={handleCloseModal}>
-      Cancel
+    <button className="modalContainer--btn" onClick={handleCloseModal}>
+      Post
     </button>
-  </form>
-    
+  </form>  
     
   </div>
  </div>

@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../Context"
+import { ThumbsUp,MessageCircle,Share2, Gift, Smile, Star } from "react-feather"
+import { X } from "react-feather"
 import Avatar from './Avatar'
 import '../Styles/Posts.css'
 
@@ -14,38 +16,52 @@ const Posts = () => {
   const dateObj = new Date(timestamp);
 
 // Get day, month, and time using toLocaleDateString and toLocaleTimeString
-  const options = { day: 'numeric', month: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' };
+  const options = { day: 'numeric', month: 'short', year: '2-digit', hour: 'numeric', minute: 'numeric' };
   const formattedDate = dateObj.toLocaleDateString(undefined, options);
 
 
  return(
  <div className="post">
+   
   <div className="post--header">
-   <Avatar/>
-     {user ? user.name : 'Anonymous'}
-   <p>{formattedDate}</p>
-   <p onClick={()=>handleDeletePost(post.$id)}>delete_post</p>
+   <Avatar/>  
+   <div className="post--info"> 
+     <p> {user ? user.name : 'Anonymous'}</p>
+    <p>{formattedDate}</p>
+   </div>
+   <X onClick={()=>handleDeletePost(post.$id)}/>
   </div>
   <div className="post--body">
    <p>{post.body}</p>
   </div>
-  <div className="post--icons">
-   <ul>
-<li>
- <span>1</span>
- <span>a</span>
-</li>
-<li>
- <span>2</span>
- <span>a</span>
-</li>
-<li>
- <span>3</span>
- <span>a</span>
-</li>
+   <ul className="post--icons">
+    <li>
+     <span><ThumbsUp/></span>
+     <span>Like</span>
+    </li>
+    <li>
+     <span><MessageCircle/></span>
+     <span>Comment</span>
+    </li>
+    <li>
+     <span><Share2/></span>
+     <span>Share</span>
+    </li>
    </ul>
+  <div className="post--comment">
+   <Avatar/>
+ 
+    <div className="post--comment-icons">
+        <p>Write a comment</p>
+     <div className="post--comment-icon">
+      <Gift/>
+     <Smile/>
+     <Star/>
+     </div>
+    </div>
+ 
+   
   </div>
-  <div className="post--comment"></div>
  </div>
  )
  })

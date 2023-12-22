@@ -1,28 +1,25 @@
 .sidebar{
- padding-right: 100px;
+ flex: 30%;
 }
-.sidebar--ul{
-  flex: 30%;
+.sidebar > ul{
   position: fixed;
   cursor: pointer;
 }
 
-.sidebar--ul > li{
+/* .sidebar--ul > li{
  width: 100%;
  display: flex;
  column-gap: 15px;
  margin-left: 10px;
- margin-bottom: 15px;
- padding: 5px 0 5px 5px;
-}
-.sidebar--ul > li:hover{
+ margin-bottom: 10px;
+ padding: 2px 0 2px 0;
+ position:fixed;
+
+} */
+/* .sidebar> li:hover{
  background-color:lightgray;
  border-radius: 4px 0 0 4px;
-}
-
-.sidebar--icon{
- color:cadetblue
-}
+} */
 
 .sidebar--name{
  font-size: 15px;
@@ -32,13 +29,13 @@
 
 .sidebar--username{
  display: flex;
- align-items: center;
- gap: 10px;
+ align-items: start;
+ column-gap: 7px;
  justify-content: center;
- margin: 17px 0;
-  flex: 30%;
+ margin: 15px 0;
+ flex: 30%;
  position:sticky;
- top: 70px;
+ top:70px;
 }
 .sidebar--username > h1{
  color: rgb(145, 144, 144);
@@ -49,5 +46,20 @@
 .sidebar--username > span{
  font-weight: 400;
  font-size: x-large;
-  font-family: cursive;
+ font-family: cursive;
+}
+
+.sidebar--list{
+ display: flex;
+ align-items: center;
+ column-gap: 5px;
+ padding: 5px 0 2px 7px;
+ margin:0 0 10px 10px;
+ cursor: pointer;
+}
+
+.sidebar--list:hover{
+ background-color:lightgray;
+ border-radius: 6px 0 0 6px;
+
 }
