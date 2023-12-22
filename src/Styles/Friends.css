@@ -1,0 +1,22 @@
+.friends--container{
+ display: flex;
+ flex-wrap: wrap; 
+ max-width: 80%;
+ margin: 10px auto;
+ gap: 20px;
+
+}
+
+.friend--btn{
+ padding: 3px 20px;
+ color: white;
+ border: none;
+ cursor: pointer;
+ border-radius: 3px;
+ background-color: rgb(187, 230, 245);
+}
+
+.friends > h1{
+ padding-left: 10px;
+ color: rgb(58, 56, 56);
+}

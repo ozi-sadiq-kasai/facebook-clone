@@ -19,3 +19,10 @@
  font-size: 15px;
  padding-left:5px ;
 }
+
+.suggest > h4{
+ color: gray;
+ border-bottom: 1px solid lightgray;
+ margin-bottom: 10px;
+ padding-bottom: 3px;
+}
